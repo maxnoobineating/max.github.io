@@ -1,3 +1,4 @@
 .a  { font-family: impact }
 .a>.b  { color:green }
-h1  { color:purple }
+.a  { font-size: 100px }
+h1  { color:purple; font-size: 300px }
