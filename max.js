@@ -33,7 +33,7 @@ fs.readFile('./max.github.io/maxjs.js','UTF-8',function(err,data){
 		} else console.log(err);
 });*/
 
-app.use('/',express.static(__dirname+'/max.github.io'));
+//app.use('/',express.static(__dirname+'/max.github.io'));
 
 app.get('/',function(req,res){
 	res.send(webPage.html);
