@@ -44,22 +44,22 @@ app.get('/css.css',function(req,res){
 	res.write(webPage.css);
 	res.end();
 });
-app.get('/maxjs.js',function(req,res){
+/*app.get('/maxjs.js',function(req,res){
 	//res.set('Content-Type', 'text/js');
 	res.write(webPage.js);
 	res.end();
-});
-/*app.get('/maxjs.js',function(req,res){
+})*/;
+/*app.get('/jpg.jpg',function(req,res){
 	res.set('Content-Type', 'image/jpeg');
 	res.write(webPage.img);
 	res.end();
 });*/
-app.get('/in/:x',function(req,res){
+/*app.get('/in/:x',function(req,res){
 	res.json({
 		'data1': 3,
 		'data2': 'HA!'
 	});
-});
+});*/
 app.listen(8013,function(err){
 	console.log('listening on port 5566');
 });
