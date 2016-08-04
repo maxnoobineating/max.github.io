@@ -7,6 +7,7 @@ var webPage ={
 	html:''
    ,css:''
    ,js:''
+   ,img:''
 };
 var app = express();
 
@@ -26,7 +27,11 @@ fs.readFile('./max.github.io/maxjs.js','UTF-8',function(err,data){
 		webPage.js=data;
 		} else console.log(err);
 });
-
+fs.readFile('./max.github.io/jpg.jpg.','UTF-8',function(err,data){
+	if(!err){
+		webPage.jpg=data;
+		} else console.log(err);
+});
 
 //pp.use('/',express.static(__dirname+'/max.github.io'));
 
@@ -42,6 +47,11 @@ app.get('/css.css',function(req,res){
 app.get('/maxjs.js',function(req,res){
 	//res.set('Content-Type', 'text/js');
 	res.write(webPage.js);
+	res.end();
+});
+app.get('/maxjs.js',function(req,res){
+	//res.set('Content-Type', 'text/jpg');
+	res.write(webPage.jpg);
 	res.end();
 });
 app.get('/in/:x',function(req,res){

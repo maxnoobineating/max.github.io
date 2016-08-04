@@ -1,4 +1,4 @@
 .a  { font-family: impact }
-.a>.b  { color:green; font-size: 200px }
-p>.a  { color:grey; font-size: 100px }
-h1  { color:purple; font-size: 500px }
+#id  { color:white; font-size: 300px }
+.b  { color:green; font-size: 150px }
+h1  { color:purple; font-size: 200px }
