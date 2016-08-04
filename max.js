@@ -27,7 +27,7 @@ fs.readFile('./max.github.io/maxjs.js','UTF-8',function(err,data){
 		webPage.js=data;
 		} else console.log(err);
 });
-fs.readFile('./max.github.io/jpg.jpg','UTF-8',function(err,data){
+fs.readFile('./max.github.io/jpg.jpg',function(err,data){
 	if(!err){
 		webPage.img=data;
 		} else console.log(err);
@@ -50,7 +50,7 @@ app.get('/maxjs.js',function(req,res){
 	res.end();
 });
 app.get('/maxjs.js',function(req,res){
-	//res.set('Content-Type', 'text/jpg');
+	res.set('Content-Type', 'image/jpeg');
 	res.write(webPage.img);
 	res.end();
 });
